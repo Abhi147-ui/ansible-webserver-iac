@@ -1,0 +1,16 @@
+---
+apache_package: apache2
+apache_service: apache2
+web_root: /var/www/html
+
+company_name: "ABC Corporation"
+site_title: "Welcome to ABC Corporation"
+site_message: "This server is managed automatically by Ansible. Do not edit files by hand."
+site_version: "1.0"
+
+admin_group: webadmins
+admin_users:
+  - name: devops_admin
+    comment: "DevOps Administrator"
+  - name: webops_admin
+    comment: "Web Operations Administrator"

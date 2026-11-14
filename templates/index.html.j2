@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ company_name }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; color: #222; }
+    header { background: #0b3d91; color: #fff; padding: 40px 20px; text-align: center; }
+    main { max-width: 700px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; }
+    footer { text-align: center; font-size: 13px; color: #666; padding: 20px; }
+  </style>
+</head>
+<body>
+  <header><h1>{{ site_title }}</h1></header>
+  <main>
+    <p>{{ site_message }}</p>
+    <p><strong>Served by:</strong> {{ inventory_hostname }} ({{ ansible_default_ipv4.address | default('n/a') }})</p>
+    <p><strong>Operating system:</strong> {{ ansible_distribution }} {{ ansible_distribution_version }}</p>
+  </main>
+  <footer>&copy; {{ company_name }} | Version {{ site_version }} | Deployed with Ansible</footer>
+</body>
+</html>
